@@ -1,0 +1,61 @@
+<div class="container-body">
+  <div class="container-repertoire">
+    <div class="title">Repertoar</div>
+    <div class="predstave">
+      <div *ngFor="let repertoar of repertoars; let i = index let last = last" class="lista-predstava">
+        <div class="predstava">
+          <div class="left">
+            <div class="dan">{{repertoar.datum | date:'d'}}</div>
+            <div class="mesec">{{repertoar.datum | date:'MMM'}}</div>
+          </div>
+          <div class="right">
+            <div class="naziv">{{repertoar.predstava.naslov}}</div>
+            <div class="opis">
+              <div class="kategorija">{{kategorija(repertoar.predstava.opis)}} </div>
+              <div class="vreme">
+                <div class="ukras"></div>
+                <div class="tacno-vreme">
+                  <span>{{repertoar.datum | date:'HH:mm'}}</span> časova</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="!last" class="prazna-linija">
+          <div class="left"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pagination">
+      <div class="left"></div>
+      <div class="page">
+        <span>01</span>
+      </div>
+      <div class="line"></div>
+      <div class="pages">
+        <span>05</span>
+      </div>
+      <div class="right"></div>
+    </div>
+    <div class="archive">
+      <div>
+        <div class=text>ARHIVA</div>
+        <div class=line></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!--
+<div *ngFor="let repertoar of repertoars; let i = index">  
+  <h1> zdravo ovo je mesec {{repertoar.datum | date:'MMM'}}</h1>
+  <h1> zdravo ovo je dan {{repertoar.datum | date:'d'}}</h1>
+  <h1> zdravo ovo je vreme {{repertoar.datum | date:'shortTime'}}</h1>
+  <div>{{repertoar.predstava.naslov}}</div> 
+  <div>{{repertoar.predstava.opis}}</div> 
+</div>
+-->
