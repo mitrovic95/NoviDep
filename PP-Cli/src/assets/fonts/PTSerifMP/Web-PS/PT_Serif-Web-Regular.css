@@ -1,0 +1,9 @@
+/* Webfont: PTSerifMP-Regular */@font-face {
+    font-family: 'PTSerifMP';
+    src: url('PT_Serif-Web-Regular.woff2') format('woff2'), /* Modern Browsers */
+         url('PT_Serif-Web-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

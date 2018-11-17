@@ -1,0 +1,102 @@
+<div class="navigation-group">
+  <div [hidden]="bigNavigation" (mouseenter)="showHideBigNav()" class="container-small-navigation">
+    <div href="home" class="logo">
+      <div class="img"></div>
+    </div>
+    <div class="navlist">
+      <p>
+        <a href="kontakt">Kontakt</a>
+        <a href="galerija">Galerija</a>
+        <a href="ansambl">Ansambl</a>
+        <a href="repertoar">Repertoar</a>
+        <a href="onama">O nama</a>
+      </p>
+    </div>
+    <div class="nav-social">
+      <div class="line"></div>
+      <div class="twiter">
+        <div class="img"></div>
+      </div>
+      <div class="facebook">
+        <div class="img"></div>
+      </div>
+      <div class="youtube">
+        <div class="img"></div>
+      </div>
+    </div>
+  </div>
+
+  <div [hidden]="!bigNavigation" (mouseleave)="showHideBigNav()" class="container-big-navigation">
+    <div class="logo" [routerLink]="['/onama']">
+      <div class="img"></div>
+      <div class="title">
+        <div>POZORIŠTE</div>
+        <div>PROMENA</div>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="navlist">
+      <a href="onama">O nama</a>
+      <a href="repertoar">Repertoar</a>
+      <a href="ansambl">Ansambl</a>
+      <a href="galerija">Galerija</a>
+      <a href="kontakt">Kontakt</a>
+    </div>
+    <div class="nav-social">
+      <div class="line"></div>
+      <div class="twiter" onclick="window.location.href='https://twitter.com/teatarpromena?lang=en'">
+        <div class="img"></div>
+      </div>
+      <div class="facebook" onclick="window.location.href='https://web.facebook.com/promenapozoriste'">
+        <div class="img"></div>
+      </div>
+      <div class="youtube" onclick="window.location.href='https://www.youtube.com/channel/UCVKjvnkck4QtTBZmAPu80vA'">
+        <div class="img"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="navigation-group-mob">
+  <div class="container-small-navigation">
+    <div class="left"><div class="logo" [hidden]="bigNavigation"></div></div>
+    <div class="right" (click)="showHideBigNav()">
+      <div class="menu" [hidden]="bigNavigation"></div>
+      <div class="menu-x" [hidden]="!bigNavigation"></div>
+    </div>
+  </div>
+  <div class="container-big-navigation" [hidden]="!bigNavigation">
+    <div class="content">
+      <div class="up">
+        <div class="logo"><div></div></div>
+        <div class="title">
+          <div>POZORIŠTE</div>
+          <div>PROMENA</div>
+        </div>
+        <div class="line"><hr></div>
+        <div class="elements">
+          <a href="onama" (click)="showHideBigNav()">O nama</a>
+          <a href="repertoar" (click)="showHideBigNav()">Repertoar</a>
+          <a href="ansambl" (click)="showHideBigNav()">Ansambl</a>
+          <a href="galerija" (click)="showHideBigNav()">Galerija</a>
+          <a href="kontakt" (click)="showHideBigNav()">Kontakt</a>
+        </div>
+      </div>
+      <div class="down">
+        <div class="nav-social" (click)="showHideBigNav()">
+          <div class="twiter" onclick="window.location.href='https://twitter.com/teatarpromena?lang=en'">
+            <div class="img"></div>
+          </div>
+          <div class="facebook" onclick="window.location.href='https://web.facebook.com/promenapozoriste'">
+            <div class="img"></div>
+          </div>
+          <div class="youtube" onclick="window.location.href='https://www.youtube.com/channel/UCVKjvnkck4QtTBZmAPu80vA'">
+            <div class="img"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

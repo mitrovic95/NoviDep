@@ -1,0 +1,501 @@
+@import "standard.less";
+@import "fonts.less";
+
+//style
+.container-predstava {
+  display: grid;
+
+  margin-left: 55px;
+  height: 100%;
+
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+
+  overflow: hidden;
+  background-color: @color-background;
+  > .left {
+    position: relative;
+    width: 100%;
+    background-color: @color-background;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    > .up-frame {
+      position: fixed;
+      width: calc(50% - 24px);
+      text-align: center;
+      > div {
+        display: inline-block;
+        width: 47px;
+        height: 60px;
+
+        background: url(/assets/images/117/upLine_ver1.svg) no-repeat center;
+        background-size: 47px auto;
+
+        cursor: pointer;
+      }
+    }
+    > .down-frame {
+      position: fixed;
+
+      width: calc(50% - 24px);
+      bottom: 0px;
+
+      text-align: center;
+      > div {
+        display: inline-block;
+        // margin-right: 4%;
+
+        width: 47px;
+        height: 45px;
+
+        background: url(/assets/images/117/downLine_ver1.svg) no-repeat center;
+        background-size: 47px auto;
+
+        cursor: pointer;
+      }
+    }
+
+    > .frame-img {
+      > .img {
+        width: 100%;
+
+        > img {
+          width: 100%;
+        }
+      }
+      > .video {
+        position: relative;
+        width: 100%;
+        > img {
+          width: 100%;
+          position: absolute;
+          opacity: 0.7;
+        }
+        > .play {
+          position: absolute;
+          left: calc(50% - 32px);
+          margin-top: calc(35% - 30px);
+          width: 70px;
+          height: 70px;
+          background: url(/assets/images/117/play_ver1.svg) no-repeat center;
+          background-size: 70px auto;
+          cursor: pointer;
+        }
+
+        > .play:hover {
+          background: url(/assets/images/117/play_true_ver1.svg) no-repeat
+            center;
+        }
+
+        > .video-text {
+          position: absolute;
+          left: calc(50% - 30px);
+          margin-top: calc(35% - 75px);
+          text-align: center;
+          color: @color-spot;
+          .font-title-p !important;
+          font-size: 26px;
+        }
+      }
+    }
+  }
+
+  > .left::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  > .left::-webkit-scrollbar-track {
+    background-color: #413a2d;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  > .left::-webkit-scrollbar-thumb {
+    background: @color-spot;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  /* Handle on hover */
+  > .left::-webkit-scrollbar-thumb:hover {
+    background: none;
+    background-color: @color-spot;
+    cursor: pointer;
+  }
+
+  > .right {
+    // background-repeat: no-repeat;
+    // background-position: center top;
+    //background-size: auto;
+    overflow-y: auto;
+
+    > .content {
+      padding: 9%;
+      color: white;
+
+      > .reziser {
+        .font-basic !important;
+        color: @color-spot;
+        font-size: 15px;
+      }
+      > div {
+        > .reziser {
+        }
+      }
+
+      > .naziv {
+        margin-top: 5px;
+        .font-title-p !important;
+        font-size: 34px;
+        color: white;
+      }
+
+      > .ornament {
+        width: 50px;
+        margin-top: 22px;
+        margin-bottom: 31px;
+        border: none;
+        height: 1px;
+        color: @color-spot; /* old IE */
+        background-color: @color-spot;
+
+        > hr {
+          border: none;
+          height: 1px;
+          color: @color-spot; /* old IE */
+          background-color: @color-spot;
+        }
+      }
+
+      > .sadrzaj {
+        .font-basic !important;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #e0e0e0;
+        letter-spacing: 0.2px;
+        text-indent: 0px;
+      }
+
+      > .naslov-uloge {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        .font-basic !important;
+        font-size: 16px;
+        color: @color-spot;
+      }
+
+      > .list-osoba {
+        > div {
+          > .person {
+            > .uloga-ime {
+              > .uloga {
+                margin-top: 15px;
+                margin-bottom: 0px;
+                .font-basic !important;
+                color: white;
+                font-size: 14px;
+              }
+
+              > .ime {
+                margin-top: 4px;
+                margin-bottom: 10px;
+                .font-basic !important;
+                color: @color-spot;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+    > .box-button {
+      position: fixed;
+      z-index: 10;
+      bottom: 0;
+      left: calc(75% - 28px);
+      background: rgba(34, 33, 39, 0.5);
+
+      > .text-line {
+        margin-bottom: 5px;
+        .font-basic !important;
+        color: @color-spot;
+        font-size: 12px;
+        cursor: pointer;
+      }
+
+      > .line {
+        display: grid;
+        grid-template-columns: 50%;
+        grid-template-rows: 100%;
+
+        height: 30px;
+
+        > div {
+          border-right: 1px solid @color-spot;
+        }
+      }
+    }
+
+    > .go-up {
+      position: fixed;
+      z-index: 5;
+      top: 0;
+      right: 0;
+      width: 49%;
+      height: 100px;
+    }
+
+    > .go-down {
+      position: fixed;
+      z-index: 5;
+      bottom: 0;
+      right: 0;
+      width: 49%;
+      height: 100px;
+    }
+  }
+  > .right::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  > .right::-webkit-scrollbar-track {
+    background-color: #413a2d;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  > .right::-webkit-scrollbar-thumb {
+    background: @color-spot;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  /* Handle on hover */
+  > .right::-webkit-scrollbar-thumb:hover {
+    background: none;
+    background-color: @color-spot;
+    cursor: pointer;
+  }
+}
+
+.container-predstava-j-mob {
+  //position: fixed;
+  margin-top: 45px !important;
+  padding: 0px 20px;
+
+  display: grid;
+  min-height: 100%;
+  width: calc(100vw - 40px);
+
+  grid-template-columns: 100%;
+
+  background-color: @color-background;
+
+  > .header {
+    margin-top: 20px;
+    align-self: end;
+    padding-bottom: 5px;
+
+    .font-menu-header !important;
+    color: white;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: 200;
+    border-bottom: 1px solid white;
+  }
+
+  > .content {
+    padding-top: 16px;
+    color: white;
+
+    > .reziser {
+      margin-top: 5px;
+      .font-basic !important;
+      color: @color-spot;
+      font-size: 15px;
+    }
+
+    > .naziv {
+      margin-top: 4px;
+      .font-title-p !important;
+      font-size: 28px;
+      color: white;
+    }
+
+    > .ornament {
+      width: 40px;
+      margin-top: 17px;
+      margin-bottom: 24px;
+      border: none;
+      height: 1px;
+      color: @color-spot; /* old IE */
+      background-color: @color-spot;
+
+      > hr {
+        border: none;
+        height: 1px;
+        color: @color-spot; /* old IE */
+        background-color: @color-spot;
+      }
+    }
+
+    > .sadrzaj {
+      .font-basic !important;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #e0e0e0;
+      letter-spacing: 0.2px;
+      text-indent: 0px;
+    }
+
+    > .naslov-uloge {
+      margin-top: 32px;
+      margin-bottom: 17px;
+      .font-basic !important;
+      font-size: 16px;
+      color: @color-spot;
+    }
+
+    > .list-osoba {
+      margin-bottom: 25px;
+      > div {
+        > .person {
+          > .uloga-ime {
+            > .uloga {
+              margin-top: 15px;
+              margin-bottom: 0px;
+              .font-basic !important;
+              color: white;
+              font-size: 14px;
+            }
+
+            > .ime {
+              margin-top: 4px;
+              margin-bottom: 10px;
+              .font-basic !important;
+              color: @color-spot;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    .frame-img {
+      margin-top: 20px;
+      margin-left: -20px;
+      margin-bottom: 60px;
+      margin-left: -20px;
+      width: calc(100% + 40px);
+      overflow-x: scroll;
+      overflow-y: hidden;
+      height: 41vh;
+      display: flex;
+      border-top: 1px solid @color-spot;
+      border-bottom: 1px solid @color-spot;
+
+      .img {
+        float: left;
+        height: 100%;
+        img {
+          height: 100%;
+        }
+      }
+
+      > .video {
+        position: relative;
+        height: 100%;
+        > img {
+          height: 100%;
+          position: absolute;
+          opacity: 0.7;
+        }
+        > .play {
+          position: absolute;
+          left: calc(19vw - 25px);
+          top: calc(50% - 25px);
+          width: 60px;
+          height: 60px;
+          background: url(/assets/images/117/play_ver1.svg) no-repeat center;
+          background-size: 50px auto;
+          cursor: pointer;
+        }
+
+        > .video-text {
+          position: absolute;
+          left: calc(21vw - 29px);
+          top: calc(50% - 59px);
+
+          text-align: center;
+          color: @color-spot;
+          .font-title-p !important;
+          font-size: 22px;
+        }
+      }
+    }
+
+    .naslov-uloge {
+    }
+
+    .list-osoba {
+      div {
+        .person {
+          .uloga-ime {
+            .uloga {
+            }
+
+            .ime {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > .box-button {
+    position: fixed;
+    left: calc(50% - 34px);
+    bottom: 0;
+    align-self: end;
+    background-color: rgba(34, 33, 39, 0.5);
+    padding: 10px;
+    padding-bottom: 0px;
+    border-radius: 10px;
+
+    > .text-line {
+      margin-bottom: 5px;
+      .font-basic !important;
+      color: @color-spot;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    > .line {
+      display: grid;
+      grid-template-columns: 50%;
+      grid-template-rows: 100%;
+
+      height: 15px;
+
+      > div {
+        border-right: 1px solid @color-spot;
+      }
+    }
+  }
+}
+
+//responsive
+@media screen and (max-width: 720px) {
+  .container-predstava {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .container-predstava-j-mob {
+    display: none;
+  }
+}

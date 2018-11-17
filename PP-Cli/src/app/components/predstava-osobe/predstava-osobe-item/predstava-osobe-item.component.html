@@ -1,0 +1,160 @@
+<!--
+  <div class="container-body">
+    <div class="container-predstava" *ngIf="predstavaOsobe">
+      <div class="predstava">
+        <div class="container-left">
+          <div class="left">
+            <div class="up-frame"><div></div></div>
+            <div class="down-frame"><div></div></div>
+            <div #panel class="frame-img">
+              <div *ngFor="let s of slike; let i = index">
+                <div
+                  *ngIf="provera(s.namena, predstavaOsobe[0].predstava.naslov)"
+                >
+                  <img src="/assets/images/Predstave/{{s.sadrzaj}}.jpg" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-right">
+          <div class="right">
+            <div class="content">
+              <div *ngFor="let a of predstavaOsobe; let i = index">
+                <div class="reziser" *ngIf="a.uloga == 'Reziser'">
+                  {{ a.osoba.ime }} {{ a.osoba.prezime }}
+                </div>
+              </div>
+              <div class="naziv">{{ predstavaOsobe[0].predstava.naslov }}</div>
+              <div class="ornament"></div>
+              <div class="sadrzaj">{{ predstavaOsobe[0].predstava.opis }}</div>
+              <div class="naslov-uloge">ULOGE:</div>
+              <div *ngFor="let a of predstavaOsobe; let i = index">
+                <div class="person" *ngIf="a.uloga != 'Reziser'">
+                  <img
+                    class="img"
+                    src="/assets/images/Ensemble/Small/img_{{a.osoba.id}}_1.png"
+                  />
+                  <div class="full-name">
+                    <h2>{{ a.uloga }}</h2>
+                    <h1>{{ a.osoba.ime }} {{ a.osoba.prezime }}</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rezervacija">
+              <div>
+                <div class="text" [routerLink]="['/kontakt']">REZERVIŠI</div>
+                <div class="line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+
+<div class="container-predstava">
+  <div #panel class="left">
+    <div class="up-frame">
+      <div (mouseenter)="podizanje()" (mouseleave)="zaustavljanje()"></div>
+    </div>
+    <div class="down-frame">
+      <div (mouseenter)="spustanje()" (mouseleave)="zaustavljanje()"></div>
+    </div>
+    <div #panel class="frame-img">
+      <div class="img" *ngFor="let s of slike; let i = index">
+        <img *ngIf="i <= 4" src="/assets/images/Predstave/{{s.sadrzaj}}.jpg" />
+      </div>
+      <div *ngIf="predstavaOsobe[0].predstava.video" #target class="video">
+        <img src="/assets/images/Predstave/{{slike[0].sadrzaj}}.jpg" />
+        <div class="video-text">Video</div>
+        <div
+          (click)="goYouTube(predstavaOsobe[0].predstava.video)"
+          class="play"
+        ></div>
+      </div>
+    </div>
+  </div>
+  <div #right class="right">
+    <div class="content">
+      <div class="reziser" *ngIf="rezija(predstavaOsobe[0].predstava.opis)">
+        {{ rezija(predstavaOsobe[0].predstava.opis) }}
+      </div>
+      <div class="naziv">{{ predstavaOsobe[0].predstava.naslov }}</div>
+      <div class="ornament"><hr /></div>
+      <div class="sadrzaj">{{ tekst(predstavaOsobe[0].predstava.opis) }}</div>
+      <div class="naslov-uloge">ULOGE:</div>
+      <div class="list-osoba">
+        <div *ngFor="let a of predstavaOsobe; let i = index">
+          <div class="person" *ngIf="a.uloga != 'Reziser'">
+            <div class="uloga-ime">
+              <div class="uloga">{{ a.uloga }}</div>
+              <div class="ime">{{ a.osoba.ime }} {{ a.osoba.prezime }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box-button">
+      <div class="text-line" [routerLink]="['/kontakt']">
+        <span> <span>REZERVIŠI</span> </span>
+      </div>
+      <div class="line"><div></div></div>
+    </div>
+    <div
+      class="go-up"
+      (mouseenter)="podizanjeRight()"
+      (mouseleave)="zaustavljanjeRight()"
+    ></div>
+    <div
+      class="go-down"
+      (mouseenter)="spustanjeRight()"
+      (mouseleave)="zaustavljanjeRight()"
+    ></div>
+  </div>
+</div>
+
+<div class="container-predstava-j-mob">
+  <div class="header">Predstava</div>
+  <div class="content">
+    <div class="reziser" *ngIf="rezija(predstavaOsobe[0].predstava.opis)">
+      {{ rezija(predstavaOsobe[0].predstava.opis) }}
+    </div>
+    <div class="naziv">{{ predstavaOsobe[0].predstava.naslov }}</div>
+    <div class="ornament"><hr /></div>
+    <div class="sadrzaj">{{ tekst(predstavaOsobe[0].predstava.opis) }}</div>
+
+    <div class="naslov-uloge">ULOGE:</div>
+    <div class="list-osoba">
+      <div *ngFor="let a of predstavaOsobe; let i = index">
+        <div class="person" *ngIf="a.uloga != 'Reziser'">
+          <div class="uloga-ime">
+            <div class="uloga">{{ a.uloga }}</div>
+            <div class="ime">{{ a.osoba.ime }} {{ a.osoba.prezime }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div #panel class="frame-img">
+      <div class="img" *ngFor="let s of slike; let i = index">
+        <img *ngIf="i <= 4" src="/assets/images/Predstave/{{s.sadrzaj}}.jpg" />
+      </div>
+      <div *ngIf="predstavaOsobe[0].predstava.video" #target class="video">
+        <img src="/assets/images/Predstave/{{slike[0].sadrzaj}}.jpg" />
+        <div class="video-text">Video</div>
+        <div
+          (click)="goYouTube(predstavaOsobe[0].predstava.video)"
+          class="play"
+        ></div>
+      </div>
+    </div>
+  </div>
+  <div class="box-button">
+    <div class="text-line" [routerLink]="['/kontakt']">
+      <span> <span>REZERVIŠI</span> </span>
+    </div>
+    <div class="line"><div></div></div>
+  </div>
+</div>

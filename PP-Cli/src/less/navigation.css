@@ -1,0 +1,417 @@
+.gradient-white {
+  background: linear-gradient(to right, #FFFFFF, #F2F2F2);
+}
+.font-text {
+  font-family: 'Roboto', sans-serif !important;
+}
+.font-title {
+  font-family: 'Cardo-Regular', serif !important;
+}
+.font-navigation {
+  font-family: 'NotoSerifKR-Regular' !important;
+}
+.font-sing {
+  font-family: 'TuesdayNightMP-Regular' !important;
+}
+* :focus {
+  outline: 0;
+}
+@font-face {
+  font-family: "TuesdayNightMP-Regular";
+  src: url("/assets/fonts/TuesdayNightMP.woff2") format("woff2");
+}
+.font-s {
+  font-family: "TuesdayNightMP-Regular" !important;
+}
+@font-face {
+  font-family: "Cardo-Regular-Regular";
+  src: url("/assets/fonts/Cardo-Regular.woff2") format("woff2");
+}
+.font-title-p {
+  font-family: "Cardo-Regular-Regular" !important;
+}
+@font-face {
+  font-family: "NotoSerif-Regular";
+  src: url("/assets/fonts/1/NotoSerif-Regular.woff2") format("woff2");
+}
+.font-menu {
+  font-family: "NotoSerif-Regular" !important;
+}
+.font-menu-header {
+  font-family: "NotoSerif-Regular" !important;
+}
+.font-ornament {
+  font-family: "NotoSerif-Regular" !important;
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("/assets/fonts/1/Roboto-Regular.woff2") format("woff2");
+}
+.font-menu-title {
+  font-family: "Roboto-Regular" !important;
+}
+.font-cover-title {
+  font-family: "Roboto-Regular" !important;
+}
+.font-basic {
+  font-family: "Roboto-Regular" !important;
+}
+@font-face {
+  font-family: "Slabo27px-Regular";
+  src: url("/assets/fonts/1/Slabo27px-Regular.woff2") format("woff2");
+}
+.font-cover-m {
+  font-family: "Slabo27px-Regular" !important;
+}
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("/assets/fonts/1/OpenSans-Regular.woff2") format("woff2");
+}
+.font-text-basic {
+  font-family: "OpenSans-Regular" !important;
+}
+.font-text-title {
+  font-family: "OpenSans-Regular" !important;
+}
+@font-face {
+  font-family: "Allura" !important;
+  src: url("/assets/fonts/Allura-Regular.ttf") format("ttf") !important;
+}
+@font-face {
+  font-family: "Cardo-Regular";
+  src: url("/assets/fonts/Cardo-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Roboto" !important;
+  src: url("/assets/fonts/Roboto-Regular.ttf") format("ttf") !important;
+}
+@font-face {
+  font-family: "Roboto" !important;
+  src: url("/assets/fonts/Roboto-Bold.ttf") format("ttf") !important;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Roboto" !important;
+  src: url("/assets/fonts/Roboto-Light.ttf") format("ttf") !important;
+  font-weight: lighter;
+}
+@font-face {
+  font-family: "Roboto" !important;
+  src: url("/assets/fonts/Roboto-Italic.ttf") format("ttf") !important;
+  font-style: italic, oblique;
+}
+@font-face {
+  font-family: "Roboto" !important;
+  src: url("/assets/fonts/Roboto-BoldItalic.ttf") format("ttf") !important;
+  font-weight: bold;
+  font-style: italic, oblique;
+}
+@font-face {
+  font-family: "Roboto" !important;
+  src: url("/assets/fonts/Roboto-LightItalic.ttf") format("ttf") !important;
+  font-weight: lighter;
+  font-style: italic, oblique;
+}
+@font-face {
+  font-family: "Noto Serif KR" !important;
+  src: url("/assets/fonts/NotoSerifKR-Light.ttf") format("ttf") !important;
+  font-weight: lighter;
+}
+@font-face {
+  font-family: "Playfair Displa" !important;
+  src: url("/assets/fonts/PlayfairDisplay-Regular.ttf") format("ttf") !important;
+}
+@font-face {
+  font-family: "Playfair Displa" !important;
+  src: url("/assets/fonts/PlayfairDisplay-Bold.ttf") format("ttf") !important;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Playfair Displa" !important;
+  src: url("/assets/fonts/PlayfairDisplay-Italic.ttf") format("ttf") !important;
+  font-style: italic, oblique;
+}
+@font-face {
+  font-family: "Playfair Displa" !important;
+  src: url("/assets/fonts/PlayfairDisplay-BoldItalic.ttf") format("ttf") !important;
+  font-weight: bold;
+  font-style: italic, oblique;
+}
+.navigation-group .container-small-navigation {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 5000;
+  width: 55px;
+  height: 100%;
+  background: linear-gradient(to right, #FFFFFF, #F2F2F2);
+  cursor: pointer;
+}
+.navigation-group .container-small-navigation > .logo {
+  width: 40px;
+  margin: 0 auto;
+}
+.navigation-group .container-small-navigation > .logo > .img {
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+  height: 35px;
+  background: url(/assets/images/117/Logo_Promena_ver1.svg) no-repeat center;
+  background-size: 23px 38px;
+}
+.navigation-group .container-small-navigation > .navlist > p {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  display: table;
+  margin-left: -169px;
+  margin-top: 178px;
+}
+.navigation-group .container-small-navigation > .navlist > p > a {
+  margin-right: 25px;
+  white-space: nowrap;
+  font-family: "NotoSerif-Regular" !important;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 13px;
+  color: #222127;
+  text-decoration: none;
+}
+.navigation-group .container-small-navigation > .nav-social {
+  position: fixed;
+  bottom: 0;
+  width: 55px;
+  background: linear-gradient(to right, #FFFFFF, #F2F2F2);
+}
+.navigation-group .container-small-navigation > .nav-social > .line {
+  margin: 8px 18px 10px 18px;
+  border-top: 1px solid #222127;
+}
+.navigation-group .container-small-navigation > .nav-social > .twiter {
+  margin-bottom: 5px;
+  width: 100%;
+  height: 35px;
+  background: url(/assets/images/117/twiter_ver1.svg) no-repeat center;
+  background-size: 17px 17px;
+}
+.navigation-group .container-small-navigation > .nav-social > .facebook {
+  margin-bottom: 5px;
+  width: 100%;
+  height: 35px;
+  background: url(/assets/images/117/fb_ver1.svg) no-repeat center;
+  background-size: 17px 17px;
+}
+.navigation-group .container-small-navigation > .nav-social > .youtube {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 35px;
+  background: url(/assets/images/117/youtube_ver1.svg) no-repeat center;
+  background-size: 25px auto;
+}
+.navigation-group .container-big-navigation {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 5000;
+  width: 160px;
+  height: 100%;
+  background: linear-gradient(to right, #FFFFFF, #F2F2F2);
+}
+.navigation-group .container-big-navigation > .logo {
+  width: 160px;
+  margin: 0 auto;
+}
+.navigation-group .container-big-navigation > .logo > .img {
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+  height: 35px;
+  background: url(/assets/images/117/Logo_Promena_ver1.svg) no-repeat center;
+  background-size: 23px 38px;
+}
+.navigation-group .container-big-navigation > .logo > .title {
+  text-align: center;
+  letter-spacing: 3px;
+  font-family: "Roboto-Regular" !important;
+  margin-top: 9px;
+  margin-bottom: 10px;
+}
+.navigation-group .container-big-navigation > .logo > .line {
+  margin: 17px 40px;
+  border-top: 1px solid #222127;
+}
+.navigation-group .container-big-navigation > .logo:hover {
+  cursor: pointer;
+}
+.navigation-group .container-big-navigation > .navlist > a {
+  display: block;
+  margin-top: 7px;
+  text-align: center;
+  font-family: "NotoSerif-Regular" !important;
+  font-size: 15px;
+  color: #222127;
+  text-decoration: none;
+}
+.navigation-group .container-big-navigation > .navlist > a:hover {
+  font-size: 15px;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+.navigation-group .container-big-navigation > .nav-social {
+  position: fixed;
+  bottom: 0;
+  width: 160px;
+  background: linear-gradient(to right, #FFFFFF, #F2F2F2);
+}
+.navigation-group .container-big-navigation > .nav-social > .twiter {
+  margin-bottom: 5px;
+  width: 100%;
+  height: 35px;
+  background: url(/assets/images/117/twiter_ver1.svg) no-repeat center;
+  background-size: 17px 17px;
+}
+.navigation-group .container-big-navigation > .nav-social > .twiter:hover {
+  cursor: pointer;
+}
+.navigation-group .container-big-navigation > .nav-social > .facebook {
+  margin-bottom: 5px;
+  width: 100%;
+  height: 35px;
+  background: url(/assets/images/117/fb_ver1.svg) no-repeat center;
+  background-size: 17px 17px;
+}
+.navigation-group .container-big-navigation > .nav-social > .facebook:hover {
+  cursor: pointer;
+}
+.navigation-group .container-big-navigation > .nav-social > .youtube {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 35px;
+  background: url(/assets/images/117/youtube_ver1.svg) no-repeat center;
+  background-size: 25px auto;
+}
+.navigation-group .container-big-navigation > .nav-social > .youtube:hover {
+  cursor: pointer;
+}
+.navigation-group-mob {
+  width: 100%;
+  max-height: 100%;
+  position: fixed;
+  display: grid;
+  z-index: 500;
+  grid-template-columns: 100%;
+  grid-template-rows: 45px calc(55%);
+}
+.navigation-group-mob > .container-small-navigation {
+  display: grid;
+  padding: 5px 10px;
+  grid-template-columns: 50% 50%;
+  background: linear-gradient(to right, #FFFFFF, #F2F2F2);
+}
+.navigation-group-mob > .container-small-navigation > .left > .logo {
+  width: 35px;
+  height: 38px;
+  background: url(/assets/images/117/Logo_Promena_ver1.svg) no-repeat center;
+  background-size: 23px 26px;
+}
+.navigation-group-mob > .container-small-navigation > .right {
+  justify-self: end;
+}
+.navigation-group-mob > .container-small-navigation > .right > .menu {
+  width: 35px;
+  height: 38px;
+  background: url(/assets/images/117/mobile_m_ver1.svg) no-repeat center;
+  background-size: 24px 38px;
+}
+.navigation-group-mob > .container-small-navigation > .right > .menu-x {
+  width: 29px;
+  height: 33px;
+  background: url(/assets/images/117/mobile_m_x_ver1.svg) no-repeat center;
+  background-size: 19px 16px;
+}
+.navigation-group-mob > .container-big-navigation {
+  margin-top: -1px;
+  background: linear-gradient(to right, #FFFFFF, #F2F2F2);
+}
+.navigation-group-mob > .container-big-navigation > .content {
+  height: calc(60vh);
+  display: grid;
+  grid-template-rows: calc(40%) 60px;
+}
+.navigation-group-mob > .container-big-navigation > .content > .up > .logo {
+  display: grid;
+}
+.navigation-group-mob > .container-big-navigation > .content > .up > .logo > div {
+  justify-self: center;
+  margin-top: 0px;
+  width: 50px;
+  height: 49px;
+  background: url(/assets/images/117/Logo_Promena_ver1.svg) no-repeat center;
+  background-size: 30px auto;
+}
+.navigation-group-mob > .container-big-navigation > .content > .up > .title {
+  text-align: center;
+  letter-spacing: 3px;
+  font-family: "Roboto-Regular" !important;
+  font-size: 23px;
+  color: #222127;
+  margin-top: 11px;
+  margin-bottom: 15px;
+}
+.navigation-group-mob > .container-big-navigation > .content > .up > .line > hr {
+  width: 111px;
+  border: none;
+  height: 1px;
+  color: #222127;
+  /* old IE */
+  background-color: #222127;
+}
+.navigation-group-mob > .container-big-navigation > .content > .up > .elements {
+  display: grid;
+}
+.navigation-group-mob > .container-big-navigation > .content > .up > .elements > a {
+  margin-top: 7px;
+  text-align: center;
+  font-family: "NotoSerif-Regular" !important;
+  font-size: 16px;
+  color: #222127;
+  text-decoration: none;
+}
+.navigation-group-mob > .container-big-navigation > .content > .down {
+  justify-self: center;
+  display: grid;
+}
+.navigation-group-mob > .container-big-navigation > .content > .down > .nav-social {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+}
+.navigation-group-mob > .container-big-navigation > .content > .down > .nav-social > .twiter > .img {
+  width: 50px;
+  height: 38px;
+  background: url(/assets/images/117/twiter_ver1.svg) no-repeat center;
+  background-size: 23px 23px;
+}
+.navigation-group-mob > .container-big-navigation > .content > .down > .nav-social > .facebook > .img {
+  width: 50px;
+  height: 38px;
+  background: url(/assets/images/117/fb_ver1.svg) no-repeat center;
+  background-size: 23px 23px;
+}
+.navigation-group-mob > .container-big-navigation > .content > .down > .nav-social > .youtube > .img {
+  width: 50px;
+  height: 38px;
+  background: url(/assets/images/117/youtube_ver2.svg) no-repeat center;
+  background-size: 23px 23px;
+}
+@media screen and (max-width: 720px) {
+  .navigation-group {
+    display: none;
+  }
+}
+@media screen and (min-width: 720px) {
+  .navigation-group-mob {
+    display: none;
+  }
+}

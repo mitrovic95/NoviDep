@@ -1,0 +1,360 @@
+@import "standard.less";
+@import "fonts.less";
+
+//style
+.navigation-group {
+  .container-small-navigation {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 5000;
+
+    width: 55px;
+    height: 100%;
+
+    .gradient-white;
+    cursor: pointer;
+
+    > .logo {
+      width: 40px;
+      margin: 0 auto;
+      > .img {
+        display: block;
+
+        margin-top: 20px;
+        width: 100%;
+        height: 35px;
+
+        background: url(/assets/images/117/Logo_Promena_ver1.svg) no-repeat
+          center;
+        background-size: 23px 38px;
+      }
+    }
+    > .navlist {
+      > p {
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+
+        display: table;
+        margin-left: -169px;
+        margin-top: 178px;
+
+        > a {
+          margin-right: 25px;
+
+          white-space: nowrap;
+
+          .font-menu !important;
+          font-style: normal;
+          font-variant: normal;
+          font-weight: normal;
+          font-size: 13px;
+          color: @color-background;
+          text-decoration: none;
+        }
+      }
+    }
+    > .nav-social {
+      position: fixed;
+      bottom: 0;
+      width: 55px;
+      .gradient-white;
+
+      > .line {
+        margin: 8px 18px 10px 18px;
+        border-top: 1px solid @color-background;
+      }
+
+      > .twiter {
+        margin-bottom: 5px;
+        width: 100%;
+        height: 35px;
+
+        background: url(/assets/images/117/twiter_ver1.svg) no-repeat center;
+        background-size: 17px 17px;
+      }
+      > .facebook {
+        margin-bottom: 5px;
+        width: 100%;
+        height: 35px;
+
+        background: url(/assets/images/117/fb_ver1.svg) no-repeat center;
+        background-size: 17px 17px;
+      }
+
+      > .youtube {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 35px;
+
+        background: url(/assets/images/117/youtube_ver1.svg) no-repeat center;
+        background-size: 25px auto;
+      }
+    }
+  }
+
+  .container-big-navigation {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 5000;
+
+    width: 160px;
+    height: 100%;
+
+    .gradient-white;
+
+    > .logo {
+      width: 160px;
+      margin: 0 auto;
+      > .img {
+        display: block;
+
+        margin-top: 20px;
+        width: 100%;
+        height: 35px;
+
+        background: url(/assets/images/117/Logo_Promena_ver1.svg) no-repeat
+          center;
+        background-size: 23px 38px;
+      }
+      > .title {
+        text-align: center;
+        letter-spacing: 3px;
+        .font-menu-title;
+        margin-top: 9px;
+        margin-bottom: 10px;
+      }
+      > .line {
+        margin: 17px 40px;
+        border-top: 1px solid @color-background;
+      }
+    }
+    > .logo:hover {
+      cursor: pointer;
+    }
+    > .navlist {
+      > a {
+        display: block;
+        margin-top: 7px;
+        text-align: center;
+        .font-menu;
+        font-size: 15px;
+        color: @color-background;
+        text-decoration: none;
+      }
+
+      > a:hover {
+        font-size: 15px;
+        text-decoration: line-through;
+        cursor: pointer;
+      }
+    }
+    > .nav-social {
+      position: fixed;
+      bottom: 0;
+      width: 160px;
+      .gradient-white;
+
+      > .twiter {
+        margin-bottom: 5px;
+        width: 100%;
+        height: 35px;
+
+        background: url(/assets/images/117/twiter_ver1.svg) no-repeat center;
+        background-size: 17px 17px;
+      }
+      > .twiter:hover {
+        cursor: pointer;
+      }
+      > .facebook {
+        margin-bottom: 5px;
+        width: 100%;
+        height: 35px;
+
+        background: url(/assets/images/117/fb_ver1.svg) no-repeat center;
+        background-size: 17px 17px;
+      }
+      > .facebook:hover {
+        cursor: pointer;
+      }
+
+      > .youtube {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 35px;
+
+        background: url(/assets/images/117/youtube_ver1.svg) no-repeat center;
+        background-size: 25px auto;
+      }
+      > .youtube:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.navigation-group-mob {
+  width: 100%;
+  max-height: 100%;
+  position: fixed;
+  display: grid;
+  z-index: 500;
+
+  grid-template-columns: 100%;
+  grid-template-rows: 45px calc(100% - 45px);
+
+  > .container-small-navigation {
+    display: grid;
+    padding: 5px 10px;
+    grid-template-columns: 50% 50%;
+
+    .gradient-white;
+
+    > .left {
+      > .logo {
+        width: 35px;
+        height: 38px;
+
+        background: url(/assets/images/117/Logo_Promena_ver1.svg) no-repeat
+          center;
+        background-size: 23px 26px;
+      }
+    }
+
+    > .right {
+      justify-self: end;
+      > .menu {
+        width: 35px;
+        height: 38px;
+
+        background: url(/assets/images/117/mobile_m_ver1.svg) no-repeat center;
+        background-size: 24px 38px;
+      }
+
+      > .menu-x {
+        width: 29px;
+        height: 33px;
+        background: url(/assets/images/117/mobile_m_x_ver1.svg) no-repeat center;
+        background-size: 19px 16px;
+      }
+    }
+  }
+
+  > .container-big-navigation {
+    margin-top: -1px;
+    .gradient-white;
+
+    > .content {
+      height: calc(100vh - 40px);
+      display: grid;
+      grid-template-rows: calc(100% - 60px) 60px;
+      > .up {
+        > .logo {
+          display: grid;
+
+          > div {
+            justify-self: center;
+            margin-top: 0px;
+            width: 50px;
+            height: 49px;
+            background: url(/assets/images/117/Logo_Promena_ver1.svg) no-repeat
+              center;
+            background-size: 30px auto;
+          }
+        }
+
+        > .title {
+          text-align: center;
+          letter-spacing: 3px;
+          .font-menu-title;
+          font-size: 23px;
+          color: @color-background;
+          margin-top: 11px;
+          margin-bottom: 15px;
+          > div {
+          }
+        }
+
+        > .line {
+          > hr {
+            width: 111px;
+            border: none;
+            height: 1px;
+            color: @color-background; /* old IE */
+            background-color: @color-background;
+          }
+        }
+
+        > .elements {
+          display: grid;
+
+          > a {
+            margin-top: 7px;
+            text-align: center;
+            .font-menu !important;
+            font-size: 16px;
+            color: @color-background;
+            text-decoration: none;
+          }
+        }
+      }
+
+      > .down {
+        justify-self: center;
+        display: grid;
+
+        > .nav-social {
+          display: grid;
+          grid-template-columns: 50px 50px 50px;
+          > .twiter {
+            > .img {
+              width: 50px;
+              height: 38px;
+
+              background: url(/assets/images/117/twiter_ver1.svg) no-repeat
+                center;
+              background-size: 23px 23px;
+            }
+          }
+
+          > .facebook {
+            > .img {
+              width: 50px;
+              height: 38px;
+
+              background: url(/assets/images/117/fb_ver1.svg) no-repeat center;
+              background-size: 23px 23px;
+            }
+          }
+
+          > .youtube {
+            > .img {
+              width: 50px;
+              height: 38px;
+
+              background: url(/assets/images/117/youtube_ver2.svg) no-repeat
+                center;
+              background-size: 23px 23px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// responsive
+@media screen and (max-width: 720px) {
+  .navigation-group {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .navigation-group-mob {
+    display: none;
+  }
+}

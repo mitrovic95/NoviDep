@@ -1,0 +1,118 @@
+<div class="container-gallery"> 
+  <div class="pre"></div>
+
+  <div class="center">
+    <div class="header">
+      Galerija
+    </div>
+    <div *ngIf="vidljivostKategorije && slike" class="gallery">
+      <div *ngFor="let predstava of predstave; let i = index" class="container-img">
+        <div (mouseenter)="izmenaTexta(predstava.naslov)" (mouseleave)="ugasiText()" class="okvir">
+          <img (click)="vidljivostKategorije=false; otvoriGaleriju(predstava.naslov); vidljivostGalerije=true;" src="/assets/images/Predstave/{{predstava.slika}}.jpg">
+        </div>
+      </div>
+      <div *ngIf="vidljivostTeksta" class="text">{{text}}</div>
+      <div class="container-pagination">
+        <div class="pagination">
+          <div class="left-a" (click)="ocitajPrethodnuStranu(currentPageNumber)"></div>
+          <div class="page-a">
+            <span>
+              <span *ngIf="currentPageNumber<10">0</span>{{currentPageNumber+1}}</span>
+
+          </div>
+          <div class="line-a">
+          </div>
+          <div class="pages-a">
+            <span>
+              <span *ngIf="ukupnoStrana<10">0</span>{{ukupnoStrana}}</span>
+
+          </div>
+          <div class="right-a" (click)="ocitajSledecuStranu()"></div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="vidljivostGalerije" class="center-img">
+      <div class="left">
+        <div class="icon" (click)="prethodnaSlika(trazeneSlike[slikaUnizu])">
+        </div>
+      </div>
+      <div class="center-s">
+        <div class="img">
+          <img *ngIf="trazeneSlike" src="/assets/images/Predstave/{{trazeneSlike[slikaUnizu].sadrzaj}}.jpg"> </div>
+        <div class="box-button">
+          <div class="text-line" (click)="zatvoriGaleriju()">
+            <span>
+              <span>ZATVORI</span>
+            </span>
+          </div>
+          <div class="line">
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="icon" (click)="sledecaSlika(trazeneSlike[slikaUnizu])">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="post"></div>
+</div>
+
+
+<div class="container-gallery-mob">
+  <div class="header">Galerija</div>
+  <div class="gallery" *ngIf="vidljivostKategorije && slike">
+
+    <div *ngFor="let predstava of predstave; let i = index" class="container-img">
+
+      <img (click)="vidljivostKategorije=false; otvoriGaleriju(predstava.naslov); vidljivostGalerije=true;" src="/assets/images/Predstave/{{predstava.slika}}.jpg">
+      <div class="text" (click)="vidljivostKategorije=false; otvoriGaleriju(predstava.naslov); vidljivostGalerije=true;">
+        <div >{{predstava.naslov}}</div>
+      </div>
+    </div>
+    <div class="container-pagination">
+      <div class="pagination">
+        <div class="left-a" (click)="ocitajPrethodnuStranu(currentPageNumber)"></div>
+        <div class="page-a">
+          <span>
+            <span *ngIf="currentPageNumber<10">0</span>{{currentPageNumber+1}}</span>
+
+        </div>
+        <div class="line-a">
+        </div>
+        <div class="pages-a">
+          <span>
+            <span *ngIf="ukupnoStrana<10">0</span>{{ukupnoStrana}}</span>
+
+        </div>
+        <div class="right-a" (click)="ocitajSledecuStranu()"></div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="vidljivostGalerije" class="center-img">
+    <div class="left">
+      <div class="icon" (click)="prethodnaSlika(trazeneSlike[slikaUnizu])">
+      </div>
+    </div>
+    <div class="center-s">
+      <div class="img">
+        <img *ngIf="trazeneSlike" src="/assets/images/Predstave/{{trazeneSlike[slikaUnizu].sadrzaj}}.jpg"> </div>
+      <div class="box-button">
+        <div class="text-line" (click)="zatvoriGaleriju()">
+          <span>
+            <span>ZATVORI</span>
+          </span>
+        </div>
+        <div class="line">
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="icon" (click)="sledecaSlika(trazeneSlike[slikaUnizu])">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,126 @@
+
+<div class="container-predstave">
+  <div class="pre"></div>
+  <div class="center">
+    <div class="header">Repertoar</div>
+    <div class="content">
+      <div class="predstave">
+        <div
+          *ngFor="let predstava of predstave; let i = index; let last = last"
+          class="lista-predstava"
+        >
+          <div class="predstava">
+            <div class="left">
+              <div class="ornament"></div>
+              <!--
+                <div class="dan">
+                  <span *ngIf="proveraDatuma(repertoar.datum | date: 'd')">0</span
+                  >{{ repertoar.datum | date: "d" }}
+                </div>
+                <div class="mesec">{{ predstava.datum | date: "MMM" }}</div>
+              -->
+            </div>
+            <div class="right">
+              <div class="naziv" [routerLink]="['/predstava', predstava.id]">
+                {{ predstava.naslov }}
+              </div>
+              <div class="opis">
+                <div
+                  class="kategorija"
+                  [routerLink]="['/predstava', predstava.id]"
+                >
+                  {{ kategorija(predstava.opis) }}
+                </div>
+                <!--
+                  <div class="vreme">
+                    <div class="ukras"></div>
+                    <div class="tacno-vreme">
+                      <span>{{ repertoar.datum | date: "HH:mm" }}</span> časova
+                    </div>
+                  </div>
+                -->
+              </div>
+            </div>
+          </div>
+          <div *ngIf="!last" class="prazna-linija">
+            <div class="left"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-pagination">
+        <div class="pagination">
+          <div class="left" (click)="ocitajStranu(currentPageNumber - 1)"></div>
+          <div class="page">
+            <span>
+              <span *ngIf="currentPageNumber < 10">0</span
+              >{{ currentPageNumber + 1 }}</span
+            >
+          </div>
+          <div class="line"></div>
+          <div class="pages">
+            <span>
+              <span *ngIf="ukupnoStrana < 10">0</span>{{ ukupnoStrana }}</span
+            >
+          </div>
+          <div class="right" (click)="ocitajSledecuStranu()"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box-button">
+      <div class="text-line" [routerLink]="['/repertoar']">
+        <span> <span>REPERTOAR</span> </span>
+      </div>
+      <div class="line"><div></div></div>
+    </div>
+  </div>
+  <div class="post"></div>
+</div>
+
+<div class="container-predstava-mob">
+  <div class="header">Repertoar</div>
+  <div class="content">
+    <div class="list">
+      <div
+        *ngFor="let predstava of predstave; let i = index; let last = last"
+        class="lista-predstava"
+      >
+        <!--
+          <div class="termin">
+            <div class="dan">
+              <span *ngIf="proveraDatuma(repertoar.datum | date: 'd')">0</span
+              >{{ repertoar.datum | date: "d" }}.
+            </div>
+            <div class="line"></div>
+            <div class="mesec">{{ repertoar.datum | date: "MMM" }}</div>
+            <div class="line"></div>
+            <div class="vreme">
+              <span>{{ repertoar.datum | date: "HH:mm" }}</span> časova
+            </div>
+          </div>
+        -->
+        <div class="naziv">{{ predstava.naslov }}</div>
+        <div class="kategorija">{{ kategorija(predstava.opis) }}</div>
+      </div>
+    </div>
+    <div class="container-pagination">
+      <div class="pagination">
+        <div class="left-a" (click)="ocitajStranu(currentPageNumber - 1)"></div>
+        <div class="page-a">
+          <span>
+            <span *ngIf="currentPageNumber < 9">0</span
+            >{{ currentPageNumber + 1 }}</span
+          >
+        </div>
+        <div class="line-a"></div>
+        <div class="pages-a">
+          <span>
+            <span *ngIf="ukupnoStrana < 10">0</span>{{ ukupnoStrana }}</span
+          >
+        </div>
+        <div class="right-a" (click)="ocitajSledecuStranu()"></div>
+      </div>
+    </div>
+  </div>
+</div>

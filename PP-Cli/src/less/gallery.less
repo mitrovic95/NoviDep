@@ -1,0 +1,460 @@
+@import "standard.less";
+@import "fonts.less";
+
+//style
+.container-gallery {
+  display: grid;
+
+  margin-left: 55px;
+  height: 100%;
+
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 100%;
+
+  overflow: hidden;
+  background-color: @color-background;
+  > .pre {
+  }
+
+  > .center {
+    display: grid;
+
+    grid-template-columns: 100%;
+    grid-template-rows: 100px calc(100% - 100px);
+    > .header {
+      align-self: end;
+      padding-bottom: 5px;
+
+      .font-menu-header !important;
+      color: white;
+      font-size: 20px;
+      letter-spacing: 1px;
+      font-weight: 200;
+      border-bottom: 1px solid white;
+    }
+
+    > .gallery {
+      align-self: center;
+      > .container-img {
+        display: inline-block;
+        float: left;
+        width: calc((100%-6 * 10) / 3 - 24px);
+        margin: 10px 12px;
+
+        > .okvir {
+          max-height: 209px;
+          overflow: hidden;
+
+          > img {
+            display: block;
+            max-width: 100%;
+            /* just in case, to force correct aspect ratio */
+            height: 45vh;
+            width: auto\9; /* ie8+9 */
+            -ms-interpolation-mode: bicubic;
+            object-fit: cover;
+            opacity: 0.2;
+            cursor: pointer;
+          }
+
+          > img:hover {
+            opacity: 1;
+          }
+        }
+      }
+      > .text {
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 52%;
+        transform: translate(-50%, -50%);
+        margin-top: 23px;
+        .font-cover-m !important;
+        font-size: 2.2vw;
+        letter-spacing: 1px;
+        font-weight: 100;
+        color: @color-spot;
+      }
+      > .container-pagination {
+        text-align: right;
+        width: 100%;
+        display: grid;
+
+        > .pagination {
+          display: inline-block;
+          margin-top: 25px;
+          margin-right: 10px;
+
+          .font-text;
+          color: @color-spot;
+
+          > .left-a {
+            display: inline-block;
+            margin-right: 7px;
+
+            width: 25px;
+            height: 25px;
+
+            background: url(/assets/images/117/goLeft_false_ver1.svg) no-repeat
+              center;
+            background-size: 23px auto;
+
+            cursor: pointer;
+          }
+          > .left-a:hover {
+            background: url(/assets/images/117/goLeft_true_ver1.svg) no-repeat
+              center;
+          }
+          > .page-a {
+            display: inline-block;
+            > span {
+              display: table;
+              font-size: 18px;
+              font-family: Arial, Helvetica, sans-serif;
+            }
+          }
+          > .line-a {
+            display: inline-block;
+            margin: 0px 5px;
+
+            width: 17px;
+            height: 25px;
+
+            background: url(/assets/images/117/line_ver1.svg) no-repeat center;
+            background-size: 16px auto;
+          }
+          > .pages-a {
+            display: inline-block;
+            > span {
+              display: table;
+              font-size: 18px;
+              font-family: Arial, Helvetica, sans-serif;
+            }
+          }
+          > .right-a {
+            display: inline-block;
+            margin-left: 7px;
+
+            width: 25px;
+            height: 25px;
+
+            background: url(/assets/images/117/goRight_false_ver1.svg) no-repeat
+              center;
+            background-size: 23px auto;
+
+            cursor: pointer;
+          }
+          > .right-a:hover {
+            background: url(/assets/images/117/goRight_true_ver1.svg) no-repeat
+              center;
+          }
+        }
+      }
+    }
+
+    > .center-img {
+      display: grid;
+
+      grid-template-columns: 100px calc(100% - 200px) 100px;
+      grid-template-rows: 100%;
+      > .left {
+        margin-top: -40px;
+        align-self: center;
+        > .icon {
+          display: inline-block;
+          width: 47px;
+          height: 60px;
+          background: url(/assets/images/117/leftLine_ver1.svg) no-repeat center;
+          background-size: 26px auto;
+          cursor: pointer;
+        }
+      }
+      > .center-s {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: calc(100% - 51px) 51px;
+
+        > .img {
+          justify-self: center;
+          align-self: center;
+          > img {
+            max-height: 80%;
+            max-width: 100%;
+          }
+        }
+
+        > .box-button {
+          justify-self: center;
+          align-self: end;
+
+          > .text-line {
+            margin-bottom: 5px;
+            .font-basic !important;
+            color: @color-spot;
+            font-size: 12px;
+            cursor: pointer;
+          }
+
+          > .line {
+            display: grid;
+            grid-template-columns: 50%;
+            grid-template-rows: 100%;
+
+            height: 30px;
+
+            > div {
+              border-right: 1px solid @color-spot;
+            }
+          }
+        }
+      }
+      > .right {
+        margin-top: -40px;
+        align-self: center;
+        justify-self: end;
+        > .icon {
+          display: inline-block;
+          width: 47px;
+          height: 60px;
+          background: url(/assets/images/117/RightLine_ver1.svg) no-repeat
+            center;
+          background-size: 26px auto;
+          cursor: pointer;
+        }
+      }
+    }
+
+    > .text {
+    }
+  }
+
+  > .post {
+  }
+}
+
+.container-gallery-mob {
+  position: fixed;
+  margin-top: 45px;
+  padding: 0px 20px;
+
+  display: grid;
+  min-height: 100%;
+  width: calc(100vw - 40px); 
+
+  grid-template-columns: 100%;
+  grid-template-rows: 50px calc(100% - 50px);
+
+  background-color: @color-background;
+  overflow: hidden;
+  > .header {
+    align-self: end;
+    padding-bottom: 5px;
+
+    .font-menu-header !important;
+    color: white;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: 200;
+    border-bottom: 1px solid white;
+  }
+
+  > .gallery {
+    padding-top: 16px;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: calc(100% / 2 - 66px) calc(100% / 2 - 66px) 100px;
+    grid-row-gap: 16px;
+
+    > .container-img {
+      position: relative;
+      > img {
+        max-height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0.3;
+      }
+
+      > .text {
+        position: absolute;
+        .font-cover-m !important;
+        font-size: 4vw;
+        color: @color-spot;
+        width: 100%;
+        top: 50%;
+        > div {
+          text-align: center;
+        }
+      }
+    }
+
+    > .container-pagination {
+      text-align: center;
+      width: 100%;
+      display: grid;
+
+      > .pagination {
+        display: inline-block;
+
+        .font-basic !important;
+        color: @color-spot;
+
+        > .left-a {
+          display: inline-block;
+          margin-right: 7px;
+
+          width: 25px;
+          height: 25px;
+
+          background: url(/assets/images/117/goLeft_false_ver1.svg) no-repeat
+            center;
+          background-size: 23px auto;
+
+          cursor: pointer;
+        }
+        > .left-a:hover {
+          background: url(/assets/images/117/goLeft_true_ver1.svg) no-repeat
+            center;
+        }
+        > .page-a {
+          display: inline-block;
+          > span {
+            display: table;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+        }
+        > .line-a {
+          display: inline-block;
+          margin: 0px 5px;
+
+          width: 17px;
+          height: 25px;
+
+          background: url(/assets/images/117/line_ver1.svg) no-repeat center;
+          background-size: 16px auto;
+        }
+        > .pages-a {
+          display: inline-block;
+          > span {
+            display: table;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+        }
+        > .right-a {
+          display: inline-block;
+          margin-left: 7px;
+
+          width: 25px;
+          height: 25px;
+
+          background: url(/assets/images/117/goRight_false_ver1.svg) no-repeat
+            center;
+          background-size: 23px auto;
+
+          cursor: pointer;
+        }
+        > .right-a:hover {
+          background: url(/assets/images/117/goRight_true_ver1.svg) no-repeat
+            center;
+        }
+      }
+    }
+  }
+
+  > .center-img {
+    display: grid;
+
+    grid-template-rows: 100%;
+    > .left {
+      position: absolute;
+      z-index: 10;
+      margin-top: -40px;
+      align-self: center;
+      > .icon {
+        display: inline-block;
+        width: 80px;
+        height: 30px;
+        background: url(/assets/images/117/leftLine_ver1.svg) no-repeat center;
+        background-size: 26px auto;
+        cursor: pointer;
+      }
+    }
+    > .center-s {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: calc(100% - 100px) 100px;
+
+      > .img {
+        margin-top: 20px;
+        justify-self: center;
+        align-self: center;
+        > img {
+          max-width: 100%;
+          max-height: calc(100vh - 140px);
+        }
+      }
+
+      > .box-button {
+        position: fixed;
+        left: calc(50% - 34px);
+        bottom: 0;
+        align-self: end;
+        background-color: rgba(34, 33, 39, 0.4);
+        padding: 10px;
+        padding-bottom: 0px;
+        border-radius: 10px;
+
+        > .text-line {
+          margin-bottom: 5px;
+          .font-basic !important;
+          color: @color-spot;
+          font-size: 12px;
+          cursor: pointer;
+        }
+
+        > .line {
+          display: grid;
+          grid-template-columns: 50%;
+          grid-template-rows: 100%;
+
+          height: 15px;
+
+          > div {
+            border-right: 1px solid @color-spot;
+          }
+        }
+      }
+    }
+    > .right {
+      position: absolute;
+      z-index: 10;
+      margin-top: -40px;
+      align-self: center;
+      justify-self: end;
+      > .icon {
+        display: inline-block;
+        width: 80px;
+        height: 30px;
+        background: url(/assets/images/117/RightLine_ver1.svg) no-repeat center;
+        background-size: 26px auto;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// responsive
+@media screen and (max-width: 720px) {
+  .container-gallery {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .container-gallery-mob {
+    display: none;
+  }
+}

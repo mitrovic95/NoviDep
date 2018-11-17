@@ -1,0 +1,544 @@
+@import "standard.less";
+@import "fonts.less";
+
+//style
+.container-home {
+  display: grid;
+
+  margin-left: 55px;
+  height: 100%;
+
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+
+  overflow: hidden;
+  background-color: black;
+
+  > .container-img {
+    display: grid;
+
+    background: url(/assets/images/Predstave/background_img_1.jpg) no-repeat;
+    background-position: center top;
+
+    > .container-uvod {
+      display: grid;
+
+      grid-template-columns: auto 500px auto;
+      grid-template-rows: 100%;
+
+      cursor: none;
+
+      > .box-center {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% auto 44px;
+        > .pre {
+          // tabela
+        }
+        > .content {
+          grid-template-columns: 100%;
+          margin-top: -84px;
+
+          > .line-center {
+            width: 100%;
+            text-align: center;
+            > hr {
+              margin-left: auto;
+              margin-right: auto;
+              margin-bottom: 35px;
+              width: 120px;
+
+              border: 1px solid @color-spot;
+            }
+          }
+
+          > .title {
+            text-align: center;
+            margin-top: 3px;
+
+            .font-cover-title !important;
+            font-size: 48px;
+            font-weight: 600;
+            letter-spacing: 12px;
+            color: white;
+          }
+
+          > .text-citat {
+            display: grid;
+            grid-template-columns: 100%;
+            margin-top: 20px;
+
+            > .left-navodnik {
+              text-align: left;
+              margin-bottom: -32px;
+              margin-left: -3px;
+
+              .font-ornament !important;
+              font-size: 50px;
+              color: @color-spot;
+            }
+
+            > .text-center {
+              text-align: center;
+              padding-left: 25px;
+              padding-right: 25px;
+
+              .font-cover-m !important;
+              letter-spacing: 1px;
+              font-size: 14px;
+              line-height: 1.4;
+              color: white;
+            }
+
+            > .right-navodnik {
+              text-align: right;
+              margin-top: -19px;
+              margin-right: -3px;
+              .font-ornament !important;
+              font-size: 50px;
+              color: @color-spot;
+            }
+          }
+        }
+
+        > .box-button {
+          > .text-line {
+            text-align: center;
+            position: relative;
+            > span {
+              position: absolute;
+              top: -186px;
+              padding-top: 170px;
+              left: 53px;
+              padding-left: 170px;
+              padding-right: 196px;
+              padding-bottom: 170px;
+              z-index: 50;
+              .font-basic !important;
+              color: #3f3317;
+              font-size: 13px;
+              cursor: url(/assets/images/117/d_ver1.png), auto;
+            }
+
+            > span:hover {
+              color: @color-spot;
+            }
+
+            > span > span:hover {
+            }
+          }
+          > .line {
+            height: 35px;
+            padding-top: 7px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 100%;
+            > div {
+              border-right: 1px solid @color-spot;
+            }
+          }
+        }
+      }
+
+      > .box-right {
+        > .dot {
+          > .dot-true {
+          }
+
+          > .dot-false {
+          }
+        }
+      }
+
+      > .focus {
+        width: 500px;
+        height: 500px;
+
+        position: fixed;
+
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.9) 0px 0px 500px 2000px,
+          rgba(0, 0, 0, 0.9) 0px 0px 114px 87px inset;
+      }
+    }
+
+    .container-o-nama {
+      display: grid;
+
+      grid-template-columns: 10% 80% 10%;
+      grid-template-rows: 100%;
+
+      > .pre {
+        background-color: rgba(34, 33, 39, 0.85);
+      }
+
+      > .center {
+        display: grid;
+
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
+
+        margin-left: -1px;
+        margin-right: -1px;
+        > .left {
+          display: grid;
+
+          grid-template-columns: 100%;
+          grid-template-rows: 100px calc(100% - 130px) 30px;
+
+          background-color: rgba(34, 33, 39, 0.85);
+          > .header {
+            align-self: end;
+            padding-bottom: 5px;
+
+            .font-menu-header !important;
+            color: white;
+            font-size: 20px;
+            letter-spacing: 1px;
+            font-weight: 200;
+            border-bottom: 1px solid white;
+          }
+
+          > .contet {
+            display: grid;
+
+            grid-template-columns: 100%;
+            grid-template-rows: calc(50% - 17%) 50%;
+
+            padding-right: 50px;
+            > .pre {
+            }
+
+            > .container-img {
+              position: relative;
+              > .box-frame {
+                width: 80%;
+                border: 1px solid @color-spot;
+              }
+              > .img {
+                position: absolute;
+                left: 25px;
+                top: 25px;
+                width: calc(100% - 25px);
+              }
+            }
+          }
+
+          > .box-button {
+            > .text-line {
+              text-align: right;
+              position: relative;
+              > span {
+                position: absolute;
+                text-align: right;
+                top: -14px;
+                right: -23px;
+                z-index: 50;
+                .font-basic;
+                color: @color-spot;
+                font-size: 12px;
+                cursor: pointer;
+              }
+            }
+            > .line {
+              height: 35px;
+              padding-top: 7px;
+              display: grid;
+              grid-template-columns: 100%;
+              grid-template-rows: 100%;
+              > div {
+                border-right: 1px solid @color-spot;
+              }
+            }
+          }
+        }
+
+        > .right {
+          display: grid;
+
+          grid-template-columns: 100%;
+          grid-template-rows: 100px calc(100% - 100px);
+
+          background-color: @color-background;
+
+          > .header {
+            border-bottom: 1px solid white;
+          }
+
+          > .content {
+            padding-left: 50px;
+            padding-top: 50px;
+            > .text-box {
+              display: grid;
+
+              grid-template-columns: 100%;
+              grid-template-rows: 41px 61px calc(85vh - 200px) 50px;
+              > .title {
+                .font-text-title !important;
+                font-size: 30px;
+                font-weight: 200;
+                color: #d8d8d8;
+              }
+
+              > .orntament {
+                margin-top: 30px;
+                margin-bottom: 30px;
+                > hr {
+                  width: 50px;
+                  border: 0;
+                  border-top: 1px solid @color-spot;
+                }
+              }
+
+              > .text {
+                margin-right: -5px;
+                text-indent: 50px;
+                .font-text-basic !important;
+                font-size: 13px;
+                line-height: 1.7;
+                color: #d8d8d8;
+                text-align: justify;
+                overflow-y: auto;
+
+                > p {
+                  margin-right: 13px;
+                }
+              }
+
+              /* width */
+              > .text::-webkit-scrollbar {
+                width: 5px;
+              }
+
+              /* Track */
+              > .text::-webkit-scrollbar-track {
+                background-color: #413a2d;
+                border-radius: 10px;
+              }
+
+              /* Handle */
+              > .text::-webkit-scrollbar-thumb {
+                background: @color-spot;
+                border-radius: 10px;
+              }
+
+              /* Handle on hover */
+              > .text::-webkit-scrollbar-thumb:hover {
+                background: none;
+              }
+
+              > .post {
+              }
+            }
+          }
+
+          > .post {
+          }
+        }
+      }
+
+      > .post {
+        background-color: @color-background;
+      }
+    }
+  }
+}
+
+.container-home-mob {
+  position: relative;
+  display: grid;
+  margin-top: 44px;
+
+  min-height: 100%;
+
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  overflow: hidden;
+  background-color: black;
+  > .container-uvod {
+    position: fixed;
+    height: 100%;
+    display: grid;
+    padding: 10px 10px 10px 0px;
+    width: 100%;
+
+    background: url(/assets/images/Predstave/background_img_2.jpg) no-repeat;
+    background-position: center top;
+    background-size: auto;
+    grid-template-columns: 100%;
+    grid-template-rows: calc(100% - 100px) 55px;
+
+    > .content {
+      margin-top: 100px;
+      width: 100%;
+      align-self: center;
+      > .line-center {
+        width: 100%;
+        text-align: center;
+        > hr {
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 25px;
+          width: 22vw;
+
+          border: 1px solid @color-spot;
+        }
+      }
+
+      > .title {
+        text-align: center;
+        margin-top: 3px;
+
+        .font-cover-title !important;
+        font-size: 7vw;
+        font-weight: 500;
+        letter-spacing: 1vw;
+        color: white;
+      }
+
+      > .text-citat {
+        padding: 0px 38px;
+        display: grid;
+        grid-template-columns: 100%;
+        margin-top: 20px;
+
+        > .left-navodnik {
+          text-align: left;
+          margin-bottom: -32px;
+          margin-left: 3px;
+
+          .font-ornament !important;
+          font-size: 40px;
+          color: @color-spot;
+        }
+
+        > .text-center {
+          text-align: center;
+          padding-left: 25px;
+          padding-right: 25px;
+
+          .font-cover-m !important;
+          letter-spacing: 1px;
+          font-size: 11px;
+          line-height: 1.4;
+          color: white;
+        }
+
+        > .right-navodnik {
+          text-align: right;
+          margin-top: -19px;
+          margin-right: 2px;
+          .font-ornament !important;
+          font-size: 40px;
+          color: @color-spot;
+        }
+      }
+    }
+
+    > .box-button {
+      > .text-line {
+        text-align: center;
+        > span {
+          .font-basic !important;
+          color: @color-spot;
+          font-size: 13px;
+          cursor: url(/assets/images/117/d_ver1.png), auto;
+        }
+
+        > span:hover {
+          color: @color-spot;
+        }
+
+        > span > span:hover {
+        }
+      }
+      > .line {
+        height: 25px;
+        padding-top: 7px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
+        > div {
+          border-right: 1px solid @color-spot;
+        }
+      }
+    }
+  }
+
+  > .container-o-nama {
+    padding: 0px 20px;
+
+    display: grid;
+
+    grid-template-columns: 100%;
+    grid-template-rows: 50px auto;
+
+    background-color: @color-background;
+    > .header {
+      align-self: end;
+      padding-bottom: 5px;
+
+      .font-menu-header;
+      color: white;
+      font-size: 17px;
+      letter-spacing: 1px;
+      font-weight: 200;
+      border-bottom: 1px solid white;
+    }
+
+    > .content {
+      > .container-img {
+        margin-top: 30px;
+        > .img {
+          width: 100%;
+        }
+      }
+
+      > .text-box {
+        > .title {
+          margin-top: 30px;
+          .font-text-title !important;
+          font-size: 30px;
+          font-weight: 200;
+          color: #d8d8d8;
+        }
+
+        > .orntament {
+          margin: 20px 0px;
+
+          > hr {
+            width: 50px;
+            border: none;
+            height: 1px;
+            color: @color-spot; /* old IE */
+            background-color: @color-spot;
+          }
+        }
+
+        > .text {
+          text-indent: 50px;
+          .font-text-basic !important;
+          font-size: 13px;
+          line-height: 1.7;
+          color: #d8d8d8;
+          text-align: justify;
+          > p {
+          }
+        }
+      }
+    }
+  }
+}
+
+// responsive
+@media screen and (max-width: 720px) {
+  .container-home {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .container-home-mob {
+    display: none;
+  }
+}

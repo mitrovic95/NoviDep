@@ -1,0 +1,525 @@
+.gradient-white {
+  background: linear-gradient(to right, #FFFFFF, #F2F2F2);
+}
+.font-text {
+  font-family: 'Roboto', sans-serif !important;
+}
+.font-title {
+  font-family: 'Cardo-Regular', serif !important;
+}
+.font-navigation {
+  font-family: 'NotoSerifKR-Regular' !important;
+}
+.font-sing {
+  font-family: 'TuesdayNightMP-Regular' !important;
+}
+* :focus {
+  outline: 0;
+}
+@font-face {
+  font-family: "TuesdayNightMP-Regular";
+  src: url("/assets/fonts/TuesdayNightMP.woff2") format("woff2");
+}
+.font-s {
+  font-family: "TuesdayNightMP-Regular" !important;
+}
+@font-face {
+  font-family: "NotoSerif-Regular";
+  src: url("/assets/fonts/1/NotoSerif-Regular.woff2") format("woff2");
+}
+.font-menu {
+  font-family: "NotoSerif-Regular" !important;
+}
+.font-menu-header {
+  font-family: "NotoSerif-Regular" !important;
+}
+.font-ornament {
+  font-family: "NotoSerif-Regular" !important;
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("/assets/fonts/1/Roboto-Regular.woff2") format("woff2");
+}
+.font-menu-title {
+  font-family: "Roboto-Regular" !important;
+}
+.font-cover-title {
+  font-family: "Roboto-Regular" !important;
+}
+.font-basic {
+  font-family: "Roboto-Regular" !important;
+}
+@font-face {
+  font-family: "Slabo27px-Regular";
+  src: url("/assets/fonts/1/Slabo27px-Regular.woff2") format("woff2");
+}
+.font-cover-m {
+  font-family: "Slabo27px-Regular" !important;
+}
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("/assets/fonts/1/OpenSans-Regular.woff2") format("woff2");
+}
+.font-text-basic {
+  font-family: "OpenSans-Regular" !important;
+}
+.font-text-title {
+  font-family: "OpenSans-Regular" !important;
+}
+@font-face {
+  font-family: "Allura" !important;
+  src: url("/assets/fonts/Allura-Regular.ttf") format("ttf") !important;
+}
+@font-face {
+  font-family: "Cardo-Regular";
+  src: url("/assets/fonts/Cardo-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Roboto" !important;
+  src: url("/assets/fonts/Roboto-Regular.ttf") format("ttf") !important;
+}
+@font-face {
+  font-family: "Roboto" !important;
+  src: url("/assets/fonts/Roboto-Bold.ttf") format("ttf") !important;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Roboto" !important;
+  src: url("/assets/fonts/Roboto-Light.ttf") format("ttf") !important;
+  font-weight: lighter;
+}
+@font-face {
+  font-family: "Roboto" !important;
+  src: url("/assets/fonts/Roboto-Italic.ttf") format("ttf") !important;
+  font-style: italic, oblique;
+}
+@font-face {
+  font-family: "Roboto" !important;
+  src: url("/assets/fonts/Roboto-BoldItalic.ttf") format("ttf") !important;
+  font-weight: bold;
+  font-style: italic, oblique;
+}
+@font-face {
+  font-family: "Roboto" !important;
+  src: url("/assets/fonts/Roboto-LightItalic.ttf") format("ttf") !important;
+  font-weight: lighter;
+  font-style: italic, oblique;
+}
+@font-face {
+  font-family: "Noto Serif KR" !important;
+  src: url("/assets/fonts/NotoSerifKR-Light.ttf") format("ttf") !important;
+  font-weight: lighter;
+}
+@font-face {
+  font-family: "Playfair Displa" !important;
+  src: url("/assets/fonts/PlayfairDisplay-Regular.ttf") format("ttf") !important;
+}
+@font-face {
+  font-family: "Playfair Displa" !important;
+  src: url("/assets/fonts/PlayfairDisplay-Bold.ttf") format("ttf") !important;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Playfair Displa" !important;
+  src: url("/assets/fonts/PlayfairDisplay-Italic.ttf") format("ttf") !important;
+  font-style: italic, oblique;
+}
+@font-face {
+  font-family: "Playfair Displa" !important;
+  src: url("/assets/fonts/PlayfairDisplay-BoldItalic.ttf") format("ttf") !important;
+  font-weight: bold;
+  font-style: italic, oblique;
+}
+.container-contact {
+  display: grid;
+  margin-left: 55px;
+  height: 100%;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 100%;
+  overflow: hidden;
+  background-color: #222127;
+}
+.container-contact > .center {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100px calc(0%);
+}
+.container-contact > .center > .header {
+  align-self: end;
+  padding-bottom: 5px;
+  font-family: "NotoSerif-Regular" !important;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 200;
+  border-bottom: 1px solid white;
+}
+.container-contact > .center > .content {
+  justify-self: center;
+  align-self: center;
+}
+.container-contact > .center > .content > .letter {
+  width: 800px;
+  height: 400px;
+  border: 1px solid #DCB54C;
+  padding: 28px;
+}
+.container-contact > .center > .content > .letter > .left {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid #DCB54C;
+}
+.container-contact > .center > .content > .letter > .left > .message {
+  padding-right: 38px;
+}
+.container-contact > .center > .content > .letter > .left > .message > .massage-label {
+  font-family: "Roboto-Regular" !important;
+  font-size: 14px;
+  color: white;
+}
+.container-contact > .center > .content > .letter > .left > .message > .massage-input {
+  margin-top: 2px;
+  padding: 5px;
+  width: 100%;
+  height: 187px;
+  color: white;
+  border: 1px solid #DCB54C;
+  background: transparent;
+  resize: none;
+  font-family: "Roboto-Regular" !important;
+  font-size: 14px;
+}
+.container-contact > .center > .content > .letter > .left > .message > textarea:focus {
+  outline-width: 0;
+}
+.container-contact > .center > .content > .letter > .left > .container-mail {
+  margin-top: 31px;
+  padding-right: 23px;
+}
+.container-contact > .center > .content > .letter > .left > .container-mail > label {
+  display: inline-block;
+  width: 112px;
+  padding-bottom: 1px;
+  font-family: "Roboto-Regular" !important;
+  font-size: 14px;
+  color: white;
+  border-bottom: 1px solid #DCB54C;
+}
+.container-contact > .center > .content > .letter > .left > .container-mail > input {
+  width: 247px;
+  padding-right: 14px;
+  text-align: right;
+  font-family: "Roboto-Regular" !important;
+  font-size: 14px;
+  color: white;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #DCB54C;
+}
+.container-contact > .center > .content > .letter > .left > .container-mail > input:focus {
+  outline-width: 0;
+}
+.container-contact > .center > .content > .letter > .left > .container-name {
+  margin-top: 15px;
+  padding-right: 23px;
+}
+.container-contact > .center > .content > .letter > .left > .container-name > label {
+  display: inline-block;
+  width: 68px;
+  padding-bottom: 1px;
+  font-family: "Roboto-Regular" !important;
+  font-size: 14px;
+  color: white;
+  border-bottom: 1px solid #DCB54C;
+}
+.container-contact > .center > .content > .letter > .left > .container-name > div {
+  width: 305px;
+  display: inline-block;
+  border-bottom: 1px solid #DCB54C;
+}
+.container-contact > .center > .content > .letter > .left > .container-name > div > input {
+  width: 274px;
+  margin-bottom: -16px;
+  padding-left: 17px;
+  padding-right: 14px;
+  font-family: "TuesdayNightMP-Regular" !important;
+  text-align: right;
+  font-size: 25px;
+  color: white;
+  background: transparent;
+  border: none;
+}
+.container-contact > .center > .content > .letter > .left > .container-name > div > input:focus {
+  outline-width: 0;
+}
+.container-contact > .center > .content > .letter > .left > .conf {
+  margin-top: 42px;
+}
+.container-contact > .center > .content > .letter > .left > .conf > button {
+  height: 33px;
+  width: 100px;
+  margin: -20px -50px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  background: transparent;
+  border: 1px solid #DCB54C;
+  font-family: "Roboto-Regular" !important;
+  font-size: 14px;
+  color: white;
+}
+.container-contact > .center > .content > .letter > .left > .conf > button:hover {
+  background-color: #DCB54C;
+}
+.container-contact > .center > .content > .letter > .right {
+  position: relative;
+  display: inline-block;
+  margin-left: 38px;
+  margin-top: 0px;
+}
+.container-contact > .center > .content > .letter > .right > .container-stamp {
+  position: absolute;
+  width: 67px;
+  height: 83px;
+  left: 292px;
+  top: -228px;
+  font-family: "Roboto-Regular" !important;
+  font-size: 11px;
+  letter-spacing: 0.01em;
+  color: #DCB54C;
+  border: 1px solid #DCB54C;
+}
+.container-contact > .center > .content > .letter > .right > .container-stamp > .stamp {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  margin-left: 22px;
+  margin-top: 14px;
+}
+.container-contact > .center > .content > .letter > .right > .container-stamp > .stamp > .line {
+  margin-top: 3px;
+  width: 33px;
+  border-top: 1px solid #DCB54C;
+}
+.container-contact > .center > .content > .letter > .right > .line {
+  width: 10px;
+  border-top: 1px solid #DCB54C;
+}
+.container-contact > .center > .content > .letter > .right > .t-data {
+  margin-top: 10px;
+  font-family: "Roboto-Regular" !important;
+  font-size: 14px;
+  letter-spacing: 0.02rem;
+}
+.container-contact > .center > .content > .letter > .right > .t-data > .data-label {
+  color: white;
+}
+.container-contact > .center > .content > .letter > .right > .t-data > .data-text {
+  margin-top: 3px;
+  font-style: italic;
+  color: #DCB54C;
+}
+.container-contact-mob {
+  position: fixed;
+  margin-top: 45px;
+  padding: 0px 20px;
+  display: grid;
+  min-height: 100%;
+  width: calc(60vw);
+  grid-template-columns: 100%;
+  grid-template-rows: 50px calc(50%);
+  background-color: #222127;
+  overflow: hidden;
+}
+.container-contact-mob > .header {
+  align-self: end;
+  padding-bottom: 5px;
+  font-family: "NotoSerif-Regular" !important;
+  color: white;
+  font-size: 17px;
+  letter-spacing: 1px;
+  font-weight: 200;
+  border-bottom: 1px solid white;
+}
+.container-contact-mob > .content {
+  margin-top: 20px;
+  width: 100%;
+}
+.container-contact-mob > .content > .basic {
+  position: relative;
+}
+.container-contact-mob > .content > .basic > .line {
+  width: 100%;
+  text-align: center;
+}
+.container-contact-mob > .content > .basic > .line > hr {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  width: 22vw;
+  border: 1px solid #DCB54C;
+}
+.container-contact-mob > .content > .basic > .title {
+  text-align: center;
+  margin-top: 3px;
+  margin-bottom: 25px;
+  font-family: "Roboto-Regular" !important;
+  font-size: 7vw;
+  font-weight: 500;
+  letter-spacing: 1vw;
+  color: white;
+}
+.container-contact-mob > .content > .basic > .informacija {
+  text-align: center;
+  margin-top: 15px;
+  font-family: "Roboto-Regular" !important;
+  font-size: 14px;
+  letter-spacing: 0.02rem;
+}
+.container-contact-mob > .content > .basic > .informacija > .header {
+  color: white;
+}
+.container-contact-mob > .content > .basic > .informacija > .content {
+  margin-top: 3px;
+  color: #DCB54C;
+}
+.container-contact-mob > .content > .basic > .box-button {
+  position: fixed;
+  left: calc(-15%);
+  bottom: 0;
+  align-self: end;
+  background-color: rgba(34, 33, 39, 0.4);
+  padding: 10px;
+  padding-bottom: 0px;
+  border-radius: 10px;
+}
+.container-contact-mob > .content > .basic > .box-button > .text-line {
+  margin-bottom: 5px;
+  font-family: "Roboto-Regular" !important;
+  color: #DCB54C;
+  font-size: 12px;
+  cursor: pointer;
+}
+.container-contact-mob > .content > .basic > .box-button > .line {
+  display: grid;
+  grid-template-columns: 50%;
+  grid-template-rows: 100%;
+  height: 15px;
+}
+.container-contact-mob > .content > .basic > .box-button > .line > div {
+  border-right: 1px solid #DCB54C;
+}
+.container-contact-mob > .content > .poruka {
+  padding: 0px 20px;
+}
+.container-contact-mob > .content > .poruka > .message > .massage-label {
+  position: relative;
+  font-family: "Roboto-Regular" !important;
+  font-size: 14px;
+  letter-spacing: 0.02rem;
+  color: white;
+}
+.container-contact-mob > .content > .poruka > .message > .massage-label > span {
+  position: absolute;
+  top: -6px;
+  background: #222127;
+  padding-right: 10px;
+  padding-bottom: 4px;
+}
+.container-contact-mob > .content > .poruka > .message > .massage-input {
+  font-family: "Roboto-Regular" !important;
+  margin-top: 2px;
+  padding: 5px;
+  padding-top: 14px;
+  width: calc(90%);
+  height: 20vh;
+  color: white;
+  border: 1px solid #DCB54C;
+  background: transparent;
+  resize: none;
+}
+.container-contact-mob > .content > .poruka > .container-mail {
+  margin-top: 20px;
+  display: grid;
+}
+.container-contact-mob > .content > .poruka > .container-mail > label {
+  margin-top: 5px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 1px;
+  font-family: "Roboto-Regular" !important;
+  font-size: 12px;
+  color: white;
+}
+.container-contact-mob > .content > .poruka > .container-mail > input {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  font-family: "Roboto-Regular" !important;
+  font-size: 14px;
+  color: white;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #DCB54C;
+}
+.container-contact-mob > .content > .poruka > .container-mail > input:focus {
+  outline-width: 0;
+}
+.container-contact-mob > .content > .poruka > .container-name {
+  margin-top: 20px;
+  display: grid;
+}
+.container-contact-mob > .content > .poruka > .container-name > label {
+  margin-top: 5px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 1px;
+  font-family: "Roboto-Regular" !important;
+  font-size: 12px;
+  color: white;
+}
+.container-contact-mob > .content > .poruka > .container-name > input {
+  margin-top: 4x;
+  width: 100%;
+  text-align: center;
+  font-family: "Roboto-Regular" !important;
+  font-size: 14px;
+  color: white;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #DCB54C;
+}
+.container-contact-mob > .content > .poruka > .container-name > input:focus {
+  outline-width: 0;
+}
+.container-contact-mob > .content > .poruka > .conf {
+  margin-top: 42px;
+}
+.container-contact-mob > .content > .poruka > .conf > button {
+  height: 33px;
+  width: 100px;
+  margin: -20px -50px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  background: transparent;
+  border: 1px solid #DCB54C;
+  font-family: "Roboto-Regular" !important;
+  font-size: 14px;
+  color: white;
+}
+.container-contact-mob > .content > .poruka > .conf > button:hover {
+  background-color: #DCB54C;
+}
+@media screen and (max-width: 720px) {
+  .container-contact {
+    display: none;
+  }
+}
+@media screen and (min-width: 720px) {
+  .container-contact-mob {
+    display: none;
+  }
+}
